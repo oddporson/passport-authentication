@@ -1,7 +1,11 @@
 # Passport Authentication
 Built login and register page with NodeJS for practice.
 
+### Front End
+EJS, Bootstrap
 
+### Back End
+NodeJS, Express
 
 ## Getting Started
 
