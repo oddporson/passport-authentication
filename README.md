@@ -11,7 +11,7 @@ NodeJS, Express
 
 Install dependencies with `npm install`.
 ```sh
-npm run dev
+npm start
 ```
 
 ## Final Product
