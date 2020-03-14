@@ -4,13 +4,14 @@
       <h1 class="text-center mb-3">
         <i class="fas fa-user-plus"></i> Register
       </h1>
+      <!-- this is the updated ejs syntax for including partial -->
       <%- include ('partials/messages') %>
       <form action="/users/register" method="POST">
         <div class="form-group">
           <label for="name">Name</label>
           <input
             type="name"
-            id="name"
+            id="name" 
             name="name"
             class="form-control"
             placeholder="Enter Name"
