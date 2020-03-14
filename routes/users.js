@@ -41,12 +41,12 @@ router.post('/register', (req, res) => {
     password2
   });
  } else {
-  // Validation passed
+  // Validation passed 
   User.findOne({ email: email })
   .then(user => {
     if(user) {
       // user exists
-      errors.push({ msg: 'Email is already registered' });
+      errors.push({ msg: 'Email is already registered' }); // TODO: This need to be resolved. It's not displaying error
       res.render('register', {
         errors,
         name, 
