@@ -1,5 +1,6 @@
-# Passport Authentication
-Built login and register page with NodeJS for practice.
+# Passport Authentication (In progress)
+
+Just building a passport authentification for practice and learning drill.
 
 ### Front End
 EJS, Bootstrap
@@ -14,7 +15,7 @@ Install dependencies with `npm install`.
 npm start
 ```
 
-## Final Product
+## Rough Draft
 
 ### Welcome Page
 !["screenshot of welcome page"](https://github.com/oddporson/passport-authentication/blob/master/docs/welcome.png)
