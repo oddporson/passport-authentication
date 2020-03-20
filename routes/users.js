@@ -45,8 +45,9 @@ router.post('/register', (req, res) => {
   User.findOne({ email: email })
   .then(user => {
     if(user) {
+      console.log("user -->", user);
       // user exists
-      errors.push({ msg: 'Email is already registered' }); // TODO: This need to be resolved. It's not displaying error
+      errors.push({ msg: 'Email is already registered' }); 
       res.render('register', {
         errors,
         name, 
@@ -60,8 +61,20 @@ router.post('/register', (req, res) => {
         email,
         password
       });
-      console.log(newUser)
-      res.send('hello');
+      // Hash Password
+      bcrypt.genSalt(10, (err, salt) => 
+        bcrypt.hash(newUser.password, salt, (err, hash) => {
+          if(err) throw err;
+          // Set password to hash
+          newUser.password = hash;
+          // Save user
+          newUser.save()
+            .then(user => {
+              res.redirect('/login');
+            })
+            .catch(err => console.log(err));
+      }))
+
     }
   });
  }
